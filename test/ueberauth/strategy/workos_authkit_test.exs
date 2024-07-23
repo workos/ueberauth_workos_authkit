@@ -40,13 +40,13 @@ defmodule Ueberauth.Strategy.WorkOS.AuthKitTest do
 
     auth = %WorkOS.UserManagement.Authentication{
       user: %{
-        id: "user_01H5JQDV7R7ATEYZDEG0W5PRYS",
-        email_verified: true,
-        email: "test@example.com",
-        first_name: "Test 01",
-        last_name: "User",
-        created_at: "2023-07-18T02:07:19.911Z",
-        updated_at: "2023-07-18T02:07:19.911Z",
+        "id" => "user_01H5JQDV7R7ATEYZDEG0W5PRYS",
+        "email_verified" => true,
+        "email" => "test@example.com",
+        "first_name" => "Test 01",
+        "last_name" => "User",
+        "created_at" => "2023-07-18T02:07:19.911Z",
+        "updated_at" => "2023-07-18T02:07:19.911Z",
       },
       organization_id: "org_myfakeorg",
       access_token: token,

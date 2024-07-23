@@ -23,7 +23,7 @@ defmodule Ueberauth.Strategy.WorkOS.AuthKit do
   alias Ueberauth.Auth.{Credentials, Extra, Info}
 
   @impl Ueberauth.Strategy
-  def uid(conn), do: conn.private[:workos_user][:id]
+  def uid(conn), do: conn.private[:workos_user]["id"]
 
   @impl Ueberauth.Strategy
   def credentials(conn) do
@@ -44,8 +44,8 @@ defmodule Ueberauth.Strategy.WorkOS.AuthKit do
 
   @impl Ueberauth.Strategy
   def info(conn) do
-    first_name = conn.private[:workos_user][:first_name]
-    last_name = conn.private[:workos_user][:last_name]
+    first_name = conn.private[:workos_user]["first_name"]
+    last_name = conn.private[:workos_user]["last_name"]
 
     name = cond do
       is_nil(first_name) -> nil
@@ -54,7 +54,7 @@ defmodule Ueberauth.Strategy.WorkOS.AuthKit do
     end
 
     %Info{
-      email: conn.private[:workos_user][:email],
+      email: conn.private[:workos_user]["email"],
       first_name: first_name,
       last_name: last_name,
       name: name,
