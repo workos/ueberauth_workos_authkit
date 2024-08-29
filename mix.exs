@@ -2,7 +2,7 @@ defmodule UeberauthWorkosAuthkit.MixProject do
   use Mix.Project
 
   @version "0.1.0"
-  @source_url "https://github.com/jumpwire-ai/ueberauth_workos_authkit"
+  @source_url "https://github.com/workos/ueberauth_workos_authkit"
 
   def project do
     [
@@ -46,7 +46,10 @@ defmodule UeberauthWorkosAuthkit.MixProject do
   defp package do
     [
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => @source_url},
+      links: %{
+        "GitHub" => @source_url,
+        "WorkOS" => "https://workos.com",
+      },
     ]
   end
 end
