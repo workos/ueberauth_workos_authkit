@@ -30,9 +30,7 @@ defmodule UeberauthWorkosAuthkit.MixProject do
   defp deps do
     [
       {:ueberauth, "~> 0.10"},
-      # Switch to upstream workos library once this PR is merged:
-      # https://github.com/workos/workos-elixir/pull/60
-      {:workos, github: "jumpwire-ai/workos-elixir"},
+      {:workos, "~> 1.1"},
       {:oauth2, "~> 2.0"},
       {:jose, "~> 1.11"},
 
